@@ -10,7 +10,7 @@ const server = http.createServer(app);
 app.use(express.static(path.join(__dirname, "/client/build")));
 const io = new Server(server, {
   cors: {
-    origin: "https://node-chat-app.azurewebsites.net:3000",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
   },
 });
